@@ -9,31 +9,31 @@ export class ProductService {
   constructor(private http: HttpClient) { }
   login(user) {
     
-    return this.http.post("http://localhost:3000/login", user);
+    return this.http.post("https://productcalicut.herokuapp.com/login", user);
   }
   signup(userData) {
-    return this.http.post("http://localhost:3000/signup", userData);
+    return this.http.post("https://productcalicut.herokuapp.com/signup", userData);
   }
 
 
   getProducts() {
-    return this.http.get("http://localhost:3000/products");
+    return this.http.get("https://productcalicut.herokuapp.com/products");
 
   }
   addProducts(item) {
-    return this.http.post("http://localhost:3000/products/add", item);
+    return this.http.post("https://productcalicut.herokuapp.com/products/add", item);
   }
 
   deleteProduct(id) {
-    return this.http.post("http://localhost:3000/products/delete", {id:id});
+    return this.http.post("https://productcalicut.herokuapp.com/products/delete", {id:id});
   }
 
   editProduct(id) {
-    return this.http.post("http://localhost:3000/products/edit", {id:id});
+    return this.http.post("https://productcalicut.herokuapp.com/products/edit", {id:id});
   }
 
   updateProduct(product) {
-    return this.http.post("http://localhost:3000/products/update", product);
+    return this.http.post("https://productcalicut.herokuapp.com/products/update", product);
   }
 
   setId(id) {
